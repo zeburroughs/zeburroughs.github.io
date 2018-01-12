@@ -1,0 +1,126 @@
+{
+  "IEEE": {
+    "title": "IEEE (RFC 1042)",
+    "max": "25%",
+    "key": [
+      [
+        {"name": "destination addr", "hint": "", "size": "6", "group": ""},
+        {"name": "sourc addr", "hint": "", "size": "6", "group": ""},
+        {"name": "length", "hint": "", "size": "2", "group": ""},
+        {"name": "DSAP AA", "hint": "", "size": "1", "group": ""},
+        {"name": "SSAP AA", "hint": "", "size": "1", "group": ""},
+        {"name": "cntl 03", "hint": "", "size": "1", "group": ""},
+        {"name": "org code 00", "hint": "", "size": "3", "group": ""},
+        {"name": "type", "hint": "", "size": "2", "group": ""},
+        {"name": "data", "hint": "", "size": "38 - 1492", "group": ""},
+        {"name": "CRC", "hint": "", "size": "4", "group": ""}
+      ]
+    ]
+  },
+
+  "DIX": {
+    "title": "DIX (RFC 894)",
+    "key": [
+      [
+        {"name": "destination addr", "hint": "", "size": "6", "group": ""},
+        {"name": "sourc addr", "hint": "", "size": "6", "group": ""},
+        {"name": "type", "hint": "", "size": "2", "group": ""},
+        {"name": "data", "hint": "", "size": "46 - 1500", "group": ""},
+        {"name": "CRC", "hint": "", "size": "4", "group": ""}
+      ]
+    ]
+  },
+
+  "IP": {
+    "title": "IP Header",
+    "key": [
+      [
+        {"name": "version", "hint": "", "size": "4 bits", "group": ""},
+        {"name": "header length", "hint": "", "size": "4 bits", "group": ""},
+        {"name": "type of service (TOS)", "hint": "", "size": "8 bits", "group": ""},
+        {"name": "total length (in bytes)", "hint": "", "size": "16 bits", "group": ""}
+      ],
+      [
+        {"name": "identification", "hint": "", "size": "16 bits", "group": ""},
+        {"name": "flags", "hint": "", "size": "3 bits", "group": ""},
+        {"name": "fragment offset", "hint": "", "size": "13 bits", "group": ""}
+      ],
+      [
+        {"name": "time to live (TTL)", "hint": "", "size": "8 bits", "group": ""},
+        {"name": "protocol", "hint": "", "size": "8 bits", "group": ""},
+        {"name": "header checksum", "hint": "", "size": "16 bits", "group": ""}
+      ],
+      [
+        {"name": "source IP address", "hint": "", "size": "32 bits", "group": ""}
+      ],
+      [
+        {"name": "destination IP address", "hint": "", "size": "32 bits", "group": ""}
+      ],
+      [
+        {"name": "options (if any)", "hint": "", "size": "32 bits", "group": ""}
+      ],
+      [
+        {"name": "data", "hint": "", "size": "32 bits", "group": ""}
+      ]
+    ]
+  },
+
+  "UDP": {
+    "title": "UDP Header",
+    "key": [
+      [
+        {"name": "source port number", "hint": "", "size": "16 bits", "group": ""},
+        {"name": "destination port number", "hint": "", "size": "16 bits", "group": ""}
+      ],
+      [
+        {"name": "UDP length", "hint": "", "size": "16 bits", "group": ""},
+        {"name": "UDP checksum", "hint": "", "size": "16 bits", "group": ""}
+      ],
+      [
+        {"name": "data (if any)", "hint": "", "size": "32 bits", "group": ""}
+      ]
+    ]
+  },
+
+  "TCP": {
+    "title": "TCP Header",
+    "key": [
+      [
+        {"name": "source port number", "hint": "", "size": "16 bits", "group": ""},
+        {"name": "destination port number", "hint": "", "size": "16 bits", "group": ""}
+      ],
+      [
+        {"name": "sequence number", "hint": "", "size": "32 bits", "group": ""}
+      ],
+      [
+        {"name": "acknowledgment number", "hint": "", "size": "32 bits", "group": ""}
+      ],
+      [
+        {"name": "header length", "hint": "", "size": "4 bits", "group": ""},
+        {"name": "reserved", "hint": "", "size": "6 bits", "group": ""},
+        {"name": "URG", "hint": "", "size": "1 bit", "group": ""},
+        {"name": "ACK", "hint": "", "size": "1 bit", "group": ""},
+        {"name": "PSH", "hint": "", "size": "1 bit", "group": ""},
+        {"name": "RST", "hint": "", "size": "1 bit", "group": ""},
+        {"name": "SYN", "hint": "", "size": "1 bit", "group": ""},
+        {"name": "FIN", "hint": "", "size": "1 bit", "group": ""},
+        {"name": "window size", "hint": "", "size": "16 bits", "group": ""}
+      ],
+      [
+        {"name": "TCP checksum", "hint": "", "size": "16 bits", "group": ""},
+        {"name": "urgent pointer", "hint": "", "size": "16 bits", "group": ""}
+      ],
+      [
+        {"name": "options (if any)", "hint": "", "size": "32 bits", "group": ""}
+      ],
+      [
+        {"name": "data (if any)", "hint": "", "size": "32 bits", "group": ""}
+      ]
+    ]
+  }
+
+
+
+
+
+}
